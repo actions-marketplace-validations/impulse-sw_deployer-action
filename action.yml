@@ -15,8 +15,7 @@ runs:
       shell: bash
       run: |
         curl -L -o depl.deb "https://github.com/impulse-sw/deployer/releases/download/$VERSION/deployer-$VERSION-x86_64.deb"
-        sudo apt update
-        sudo apt install -y ./depl.deb
+        sudo dpkg -i ./depl.deb
         rm depl.deb
 
 branding:
