@@ -18,3 +18,7 @@ runs:
         sudo apt update
         sudo apt install -y ./depl.deb
         rm depl.deb
+
+branding:
+  icon: 'check-circle'
+  color: 'blue'
