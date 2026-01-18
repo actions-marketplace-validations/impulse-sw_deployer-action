@@ -11,14 +11,13 @@ runs:
         repo: 'impulse-sw/deployer'
         regex: true
         file: "deployer-.*\\.deb"
-        target: 'depl.deb'
         token: ${{ secrets.GITHUB_TOKEN }}
 
     - name: Install `depl`
       shell: bash
       run: |
-        sudo dpkg -i ./depl.deb
-        rm depl.deb
+        sudo dpkg -i deployer-*.deb
+        rm deployer-*.deb
 
 branding:
   icon: 'check-circle'
